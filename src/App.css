@@ -1,3 +1,7 @@
+body {
+  background-color: rgb(27, 27, 27);
+}
+
 .falling-burdens-container {
   position: relative;
   width: 100%;
@@ -63,4 +67,10 @@ input {
   outline: none;
   width: 50%;
   max-width: 300px;
+}
+
+@media (max-width: 600px) {
+  input {
+    width: 100%;
+  }
 }
