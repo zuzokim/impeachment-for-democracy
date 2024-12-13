@@ -78,22 +78,28 @@ body {
 .game-finish-title {
   font-size: 24px;
   margin-bottom: 8px;
+  font-weight: 700;
 }
 
 .game-finish-body {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  overflow-y: auto;
+  height: 80%;
+  padding-bottom: 40px;
 }
 
 .game-finish-body .score {
   font-size: 32px;
+  font-weight: 700;
 }
 
 .game-finish-body .impeachment {
   font-size: 104px;
   color: red;
   line-height: 1.2;
+  font-weight: 900;
 }
 
 .game-finish-action {
@@ -109,6 +115,19 @@ body {
   background-color: red;
   color: white;
   border: none;
+}
+
+@media (max-width: 600px) {
+  .game-finish-dialog {
+    width: 80%;
+    height: 60%;
+  }
+}
+
+@media (max-width: 400px) {
+  .game-finish-body .impeachment {
+    font-size: 60px;
+  }
 }
 
 .footer {
@@ -139,11 +158,13 @@ input {
   width: 50%;
   max-width: 300px;
   border-bottom: 1px solid white;
+  backdrop-filter: blur(1px);
 }
 
 @media (max-width: 600px) {
   input {
-    width: 100%;
+    width: 92%;
+    font-size: 13px;
   }
 }
 
@@ -151,6 +172,7 @@ input {
   border: 1px solid red;
   color: red;
   background-color: transparent;
+  backdrop-filter: blur(4px);
   padding: 2px 4px;
   width: fit-content;
 }
@@ -173,12 +195,17 @@ input {
 .constitution-title {
   font-size: 32px;
   margin-bottom: 8px;
+  font-weight: 700;
 }
 
 .constitution-body {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  overflow-y: auto;
+  height: 80%;
+  padding-top: 16px;
+  padding-bottom: 40px;
 }
 
 .constitution-action {
@@ -196,13 +223,41 @@ input {
   border: none;
 }
 
+@media (max-width: 600px) {
+  .constitution-dialog {
+    width: 80%;
+    height: 60%;
+  }
+}
+
+@media (max-width: 400px) {
+  .constitution-body {
+    font-size: 13px;
+  }
+}
+
 .title-with-matched-name {
   font-size: 32px;
   font-weight: 700;
   width: fit-content;
   margin-bottom: 6px;
+  white-space: nowrap;
 }
 
 .title-with-matched-name span {
   color: red;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+    align-items: start;
+    bottom: 20px;
+  }
+  .title-with-matched-name {
+    font-size: 24px;
+  }
+  .input {
+    width: 80%;
+  }
 }
