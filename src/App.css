@@ -1,5 +1,6 @@
 body {
-  background-color: rgb(27, 27, 27);
+  background-color: #000;
+  /* border: 3px solid orange; */
 }
 
 .falling-burdens-container {
@@ -30,47 +31,178 @@ body {
   }
 }
 
-.inputWrapper {
+.header {
   position: fixed;
-  bottom: 8%;
+  top: 0;
+  height: 160px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  color: white;
+}
+
+.time-count,
+.score {
+  font-size: 20px;
+}
+
+.dialog {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Dimmed background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(1px);
+}
+
+.game-finish-dialog {
+  position: fixed;
+  z-index: 1;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 500px;
+  background-color: white;
+  color: black;
+  border: 1px solid red;
+  white-space: pre-wrap;
+  padding: 20px;
+}
+
+.game-finish-title {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.game-finish-body {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+.game-finish-body .score {
+  font-size: 32px;
+}
+
+.game-finish-body .impeachment {
+  font-size: 104px;
+  color: red;
+  line-height: 1.2;
+}
+
+.game-finish-action {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
-  padding: 0 40px;
-  height: fit-content;
 }
-
-.matchedName {
-  font-size: 18px;
-  font-weight: 700;
+.game-finish-action button {
+  width: 100%;
+  text-align: start;
+  padding: 8px 12px;
   background-color: red;
-  padding: 1px 6px 2px 6px;
-  width: fit-content;
-  margin-bottom: 6px;
+  color: white;
+  border: none;
 }
 
-.constitution {
-  color: white;
-  white-space: pre-wrap;
+.footer {
+  position: fixed;
+  bottom: 0;
+  height: 160px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 40px;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 input {
+  all: unset;
   display: block;
   padding: 10px;
   font-size: 16px;
-  color: black;
-  background-color: white;
-  border-radius: 4px;
+  color: white;
+  background-color: transparent;
   outline: none;
   width: 50%;
   max-width: 300px;
+  border-bottom: 1px solid white;
 }
 
 @media (max-width: 600px) {
   input {
     width: 100%;
   }
+}
+
+.constitution-button {
+  border: 1px solid red;
+  color: red;
+  background-color: transparent;
+  padding: 2px 4px;
+  width: fit-content;
+}
+
+.constitution-dialog {
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 500px;
+  background-color: white;
+  color: black;
+  border: 1px solid red;
+  white-space: pre-wrap;
+  padding: 20px;
+}
+
+.constitution-title {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.constitution-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.constitution-action {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.constitution-action button {
+  width: 100%;
+  text-align: start;
+  padding: 8px 12px;
+  background-color: red;
+  color: white;
+  border: none;
+}
+
+.title-with-matched-name {
+  font-size: 32px;
+  font-weight: 700;
+  width: fit-content;
+  margin-bottom: 6px;
+}
+
+.title-with-matched-name span {
+  color: red;
 }
