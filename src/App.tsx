@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import { useEffect, useState } from "react";
 import "./App.css";
 import FallingBurdens from "./FallingBurdens";
@@ -40,7 +41,9 @@ function App() {
   }, [matchedText]);
 
   return (
-    <div>
+    <>
+      <Analytics />
+
       <FallingBurdens matchedText={matchedText} />
       <div className="header">
         <TimeCount score={score} />
@@ -61,7 +64,7 @@ function App() {
           placeholder="텍스트를 입력 후 엔터 키를 눌러주세요."
         />
       </div>
-    </div>
+    </>
   );
 }
 
