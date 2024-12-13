@@ -53,7 +53,7 @@ function TimeCount({ score = 0 }: TimeCountProps) {
         open={openFinishDialog}
         onClose={() => {
           setOpenFinishDialog(false);
-          setTime(6000);
+          setTime(60000);
         }}
       />
     </>
