@@ -40,7 +40,7 @@ function App() {
     <div>
       <FallingBurdens matchedText={matchedText} />
       <div className="header">
-        <TimeCount />
+        <TimeCount score={score} />
         <Score score={score} />
       </div>
       <div className="footer">
