@@ -6,6 +6,7 @@ import TitleWithMatchedBurden from "./TitleWithMatchedBurden";
 import TimeCount from "./TimeCount";
 import Score from "./Score";
 import { burdens } from "./burdens";
+import screamVoice from "./assets/People_Voices_HumanScream.mp3";
 
 function App() {
   const [inputText, setInputText] = useState<string>("");
@@ -31,8 +32,10 @@ function App() {
   }, [matchedText]);
 
   useEffect(() => {
+    const audio = new Audio(screamVoice);
     if (burdens.includes(matchedText)) {
       setScore((prevScore) => prevScore + 10);
+      audio.play();
     }
   }, [matchedText]);
 
