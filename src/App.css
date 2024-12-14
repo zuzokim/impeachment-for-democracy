@@ -85,9 +85,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 48px;
+  /* height: 80%; */
   overflow-y: auto;
-  height: 80%;
-  padding-bottom: 40px;
 }
 
 .game-finish-body .score {
@@ -118,10 +117,23 @@ body {
   font-weight: 700;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 720px) {
   .game-finish-dialog {
-    width: 80%;
+    width: 90%;
     height: auto;
+  }
+
+  .game-finish-body {
+    gap: 36px;
+  }
+
+  .game-finish-body .score {
+    font-size: 42px;
+  }
+
+  .game-finish-action button {
+    font-size: 14px;
+    padding: 13px 15px;
   }
 }
 
@@ -159,14 +171,15 @@ input {
   outline: none;
   width: 50%;
   max-width: 300px;
-  border-bottom: 1px solid white;
+  border-bottom: 4px solid white;
   backdrop-filter: blur(1px);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 720px) {
   input {
     width: 92%;
     font-size: 13px;
+    border-bottom: 2px solid white;
   }
 }
 
@@ -240,10 +253,14 @@ input {
   font-weight: 700;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 720px) {
   .constitution-dialog {
-    width: 80%;
+    width: 90%;
     height: auto;
+  }
+  .constitution-action button {
+    font-size: 14px;
+    padding: 13px 15px;
   }
 }
 
@@ -266,7 +283,7 @@ input {
   color: red;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 720px) {
   .footer {
     flex-direction: column;
     align-items: start;
