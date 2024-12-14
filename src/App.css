@@ -163,14 +163,14 @@ body {
 input {
   all: unset;
   display: block;
-  padding: 10px;
+  padding: 10px 0;
   font-family: "Noto Sans KR", serif;
   font-size: 18px;
   color: white;
   background-color: transparent;
   outline: none;
   width: 50%;
-  max-width: 300px;
+  max-width: 350px;
   border-bottom: 4px solid white;
   backdrop-filter: blur(1px);
 }
@@ -191,6 +191,7 @@ input {
   padding: 8px;
   width: fit-content;
   line-height: 1;
+  padding: 9px 8px 7px;
 }
 
 .constitution-button:hover {
@@ -229,6 +230,7 @@ input {
   padding-top: 8px;
   padding-bottom: 40px;
   font-family: "Noto Sans KR";
+  line-height: 1.6;
 }
 
 .constitution-list {
@@ -308,10 +310,9 @@ input {
 
   input {
     max-width: 100%;
-    padding: 10px 0;
   }
 
-  .constitution-button{
+  .constitution-button {
     width: fit-content;
     height: fit-content;
     align-self: end;
