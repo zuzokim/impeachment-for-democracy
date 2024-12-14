@@ -7,9 +7,11 @@ export interface TitleWithMatchedBurdenProps {
 function TitleWithMatchedBurden({ matchedText }: TitleWithMatchedBurdenProps) {
   return (
     <div className="title-with-matched-name">
-      <span>{`105 + 1 `}</span>
-      {matchedText}
-      {matchedText ? `!!` : `탄핵 타자 연습`}
+      <span className="title">{`105 + 1 `}</span>
+      <span className="matched-text">
+        {matchedText}
+        {matchedText ? `!!` : `탄핵 타자 연습`}
+      </span>
     </div>
   );
 }
