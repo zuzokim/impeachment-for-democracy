@@ -14,8 +14,7 @@ body {
   position: absolute;
   top: 0;
   animation: fall 444s linear infinite;
-  font-size: 30px;
-  font-weight: 700;
+  font-size: 36px;
   white-space: nowrap;
   color: red;
 }
@@ -45,6 +44,8 @@ body {
 .time-count,
 .score {
   font-size: 20px;
+  font-family: "Noto Sans KR", serif;
+  font-weight: 600;
 }
 
 .dialog {
@@ -68,6 +69,7 @@ body {
   transform: translate(-50%, -50%);
   width: 400px;
   height: 500px;
+  aspect-ratio: 4 / 5;
   background-color: white;
   color: black;
   border: 1px solid red;
@@ -77,29 +79,26 @@ body {
 
 .game-finish-title {
   font-size: 24px;
-  margin-bottom: 8px;
-  font-weight: 700;
 }
 
 .game-finish-body {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 48px;
   overflow-y: auto;
   height: 80%;
   padding-bottom: 40px;
 }
 
 .game-finish-body .score {
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 48px;
+  font-family: "1214ChillBlack-Black";
 }
 
 .game-finish-body .impeachment {
   font-size: 104px;
   color: red;
   line-height: 1.2;
-  font-weight: 900;
 }
 
 .game-finish-action {
@@ -111,16 +110,18 @@ body {
 .game-finish-action button {
   width: 100%;
   text-align: start;
-  padding: 8px 12px;
+  padding: 14px 20px;
   background-color: red;
   color: white;
   border: none;
+  font-family: "Noto Sans KR";
+  font-weight: 700;
 }
 
 @media (max-width: 600px) {
   .game-finish-dialog {
     width: 80%;
-    height: 60%;
+    height: auto;
   }
 }
 
@@ -144,14 +145,15 @@ body {
 .footer-left {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 26px;
 }
 
 input {
   all: unset;
   display: block;
   padding: 10px;
-  font-size: 16px;
+  font-family: "Noto Sans KR", serif;
+  font-size: 18px;
   color: white;
   background-color: transparent;
   outline: none;
@@ -173,8 +175,14 @@ input {
   color: red;
   background-color: transparent;
   backdrop-filter: blur(4px);
-  padding: 2px 4px;
+  padding: 8px;
   width: fit-content;
+  line-height: 1;
+}
+
+.constitution-button:hover {
+  background-color: red;
+  color: white;
 }
 
 .constitution-dialog {
@@ -185,6 +193,7 @@ input {
   transform: translate(-50%, -50%);
   width: 400px;
   height: 500px;
+  aspect-ratio: 4 / 5;
   background-color: white;
   color: black;
   border: 1px solid red;
@@ -193,7 +202,7 @@ input {
 }
 
 .constitution-title {
-  font-size: 32px;
+  font-size: 24px;
   margin-bottom: 8px;
   font-weight: 700;
 }
@@ -204,8 +213,13 @@ input {
   gap: 8px;
   overflow-y: auto;
   height: 80%;
-  padding-top: 16px;
+  padding-top: 8px;
   padding-bottom: 40px;
+  font-family: "Noto Sans KR";
+}
+
+.constitution-list {
+  font-weight: 900;
 }
 
 .constitution-action {
@@ -214,19 +228,22 @@ input {
   left: 0;
   width: 100%;
 }
+
 .constitution-action button {
   width: 100%;
   text-align: start;
-  padding: 8px 12px;
+  padding: 14px 20px;
   background-color: red;
   color: white;
   border: none;
+  font-family: "Noto Sans KR";
+  font-weight: 700;
 }
 
 @media (max-width: 600px) {
   .constitution-dialog {
     width: 80%;
-    height: 60%;
+    height: auto;
   }
 }
 
@@ -237,11 +254,12 @@ input {
 }
 
 .title-with-matched-name {
-  font-size: 32px;
+  font-size: 54px;
   font-weight: 700;
+  line-height: 1;
   width: fit-content;
-  margin-bottom: 6px;
   white-space: nowrap;
+  color: white;
 }
 
 .title-with-matched-name span {

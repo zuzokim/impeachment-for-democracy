@@ -14,14 +14,14 @@ function ConstitutionDialog({ open, onClose }: ConstitutionDialogProps) {
           <div className="constitution-title">대한민국 헌법</div>
           <div className="constitution-body">
             <div>
-              <div style={{ fontWeight: 700 }}>제 1조</div>
+              <div className="constitution-list">제 1조</div>
               <div>
                 {`①대한민국은 민주공화국이다.
 ②대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다.`}
               </div>
             </div>
             <div>
-              <div style={{ fontWeight: 700 }}>제 46조</div>
+              <div className="constitution-list">제 46조</div>
               <div>
                 {`①국회의원은 청렴의 의무가 있다.
 ②국회의원은 국가이익을 우선하여 양심에 따라 직무를 행한다.

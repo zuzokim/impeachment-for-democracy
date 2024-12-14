@@ -25,7 +25,7 @@ function FallingBurdens({ matchedText }: FallingBurdensProps) {
             key={index}
             className="falling-burden"
             style={{
-              fontSize: text === "윤석열" ? "160px" : "30px",
+              fontSize: text === "윤석열" ? "106px" : "36px",
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * -100}px`,
               animationDelay: `${Math.random() * 44}s`,
