@@ -20,12 +20,14 @@ function FallingBurdens({ matchedText }: FallingBurdensProps) {
   return (
     <div className="falling-burdens-container">
       {fallingTexts.map((text, index) => {
+        const className =
+          text === "윤석열" ? "falling-burden yoon" : "falling-burden";
+
         return (
           <b
             key={index}
-            className="falling-burden"
+            className={className}
             style={{
-              fontSize: text === "윤석열" ? "106px" : "36px",
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * -100}px`,
               animationDelay: `${Math.random() * 44}s`,

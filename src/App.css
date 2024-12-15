@@ -1,5 +1,6 @@
 body {
   background-color: #000;
+  overflow: hidden;
   /* border: 3px solid orange; */
 }
 
@@ -19,6 +20,10 @@ body {
   color: red;
 }
 
+.falling-burden .yoon {
+  font-size: 106px;
+}
+
 @keyframes fall {
   0% {
     top: -50px;
@@ -33,6 +38,10 @@ body {
 @media (max-width: 720px) {
   .falling-burden {
     font-size: 24px;
+  }
+
+  .falling-burden .yoon {
+    font-size: 56px;
   }
 }
 
@@ -314,7 +323,7 @@ input {
     flex-direction: column-reverse;
     gap: 50px;
     align-items: normal;
-    bottom: 20px;
+    bottom: 0;
     justify-content: baseline;
     padding: 15px;
   }
