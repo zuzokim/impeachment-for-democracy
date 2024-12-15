@@ -29,6 +29,9 @@ body {
     top: -50px;
     opacity: 1;
   }
+  80% {
+    opacity: 0.8;
+  }
   100% {
     top: 100vh;
     opacity: 0;
