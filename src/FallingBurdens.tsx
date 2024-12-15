@@ -20,13 +20,11 @@ function FallingBurdens({ matchedText }: FallingBurdensProps) {
   return (
     <div className="falling-burdens-container">
       {fallingTexts.map((text, index) => {
-        const className =
-          text === "윤석열" ? "falling-burden yoon" : "falling-burden";
-
         return (
           <b
             key={index}
-            className={className}
+            id={text === "윤석열" ? "yoon" : ""}
+            className="falling-burden"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * -100}px`,

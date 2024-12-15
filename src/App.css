@@ -20,7 +20,7 @@ body {
   color: red;
 }
 
-.falling-burden .yoon {
+#yoon {
   font-size: 106px;
 }
 
@@ -40,8 +40,8 @@ body {
     font-size: 24px;
   }
 
-  .falling-burden .yoon {
-    font-size: 56px;
+  #yoon {
+    font-size: 54px;
   }
 }
 
