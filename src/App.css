@@ -30,6 +30,12 @@ body {
   }
 }
 
+@media (max-width: 720px) {
+  .falling-burden {
+    font-size: 24px;
+  }
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -41,11 +47,24 @@ body {
   color: white;
 }
 
+@media (max-width: 720px) {
+  .header {
+    padding: 10px 15px;
+  }
+}
+
 .time-count,
 .score {
   font-size: 20px;
   font-family: "Noto Sans KR", serif;
   font-weight: 600;
+}
+
+@media (max-width: 720px) {
+  .time-count,
+  .score {
+    font-size: 16px;
+  }
 }
 
 .dialog {
@@ -119,12 +138,13 @@ body {
 
 @media (max-width: 720px) {
   .game-finish-dialog {
-    width: 90%;
-    height: auto;
+    max-width: 320px;
+    height: 450px;
+    padding: 18px;
   }
 
   .game-finish-body {
-    gap: 36px;
+    gap: 72px;
   }
 
   .game-finish-body .score {
@@ -133,7 +153,11 @@ body {
 
   .game-finish-action button {
     font-size: 14px;
-    padding: 13px 15px;
+    padding: 10px 18px;
+  }
+
+  .game-finish-body .impeachment {
+    font-size: 86px;
   }
 }
 
@@ -257,18 +281,19 @@ input {
 
 @media (max-width: 720px) {
   .constitution-dialog {
-    width: 90%;
-    height: auto;
+    max-width: 320px;
+    height: 450px;
+    padding: 18px;
   }
   .constitution-action button {
     font-size: 14px;
-    padding: 13px 15px;
+    padding: 10px 18px;
   }
 }
 
 @media (max-width: 400px) {
   .constitution-body {
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 
@@ -291,6 +316,7 @@ input {
     align-items: normal;
     bottom: 20px;
     justify-content: baseline;
+    padding: 15px;
   }
 
   .footer-left {
@@ -298,6 +324,7 @@ input {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    gap: 10px;
   }
 
   .title-with-matched-name {
@@ -309,11 +336,15 @@ input {
 
   input {
     max-width: 100%;
+    font-size: 18px;
+    padding: 6px 0;
   }
 
   .constitution-button {
     width: fit-content;
     height: fit-content;
     align-self: end;
+    padding: 5px 7px;
+    font-size: 14px;
   }
 }
