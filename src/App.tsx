@@ -1,13 +1,13 @@
 import { Analytics } from "@vercel/analytics/react";
 import { useEffect, useState } from "react";
 import "./App.css";
-import FallingBurdens from "./FallingBurdens";
 import Constitution from "./Constitution";
 import TitleWithMatchedBurden from "./TitleWithMatchedBurden";
 import TimeCount from "./TimeCount";
 import Score from "./Score";
 import { burdens } from "./burdens";
 import screamVoice from "./assets/People_Voices_HumanScream.mp3";
+import FallingBurden from "./FallingBurden";
 
 function App() {
   const [inputText, setInputText] = useState<string>("");
@@ -40,11 +40,24 @@ function App() {
     }
   }, [matchedText]);
 
+  const [fallingTexts, setFallingTexts] = useState<string[]>(burdens);
+
+  useEffect(() => {
+    if (matchedText) {
+      setFallingTexts((prevTexts) =>
+        prevTexts.filter((text) => text !== matchedText)
+      );
+    }
+  }, [matchedText]);
+
   return (
     <>
       <Analytics />
-
-      <FallingBurdens matchedText={matchedText} />
+      <div className="falling-burdens-container">
+        {fallingTexts.map((text) => {
+          return <FallingBurden text={text} key={text} />;
+        })}
+      </div>
       <div className="header">
         <TimeCount score={score} />
         <Score score={score} />
